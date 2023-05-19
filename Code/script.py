@@ -25,7 +25,7 @@ def main(RSS_link, check_limit):
             continue
         try:
             title = episode.title.text
-            episode_number = title[:title.find("-")-1]
+            episode_number = title[:title.find("-")-1].strip()
             pbar.set_description(f"Working on {episode_number}")
             if exists(f"Data/{episode_number}.json"):
                 print(f"Already Transcribed {episode_number}")
@@ -50,7 +50,7 @@ def main(RSS_link, check_limit):
                         "episode_num":episode_number,
                         "pub_date":pub_date,
                         "duration": duration,
-                        "subtitle": subtitle,
+                        "description": description,
                         "url": url}
             all_data = {"meta_data": meta_data, "transcription_data": result, "rss_data":str(episode)}
             with open(f"Data/{episode_number}.json", "w+", encoding="utf8") as f:
@@ -64,7 +64,7 @@ def main(RSS_link, check_limit):
 
 if __name__ == "__main__":
     RSS_LINK = "https://nodumbqs.libsyn.com/rss"
-    CHECK_LIMIT = 0 
+    CHECK_LIMIT = 999 
     #There are a lot of problematic episodes, so it will only
     #Check the latest 20 episodes in case I get behind 
     main(RSS_LINK, CHECK_LIMIT)
