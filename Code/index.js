@@ -2,7 +2,7 @@ const transcriptsUl = document.getElementById("transcripts")
 const searchBox = document.getElementById('searchBox');
 
 async function populateList() {
-  const response = await fetch("https://tmbh-transcribe.github.io/TMBH-Transcribe/files.json");
+  const response = await fetch("https://tmbh-transcribe.github.io/NDQ-Transcribe/files.json");
   const json = await response.json();
   const files = json.files;
   files.forEach(makeEpisode);
@@ -18,7 +18,7 @@ function makeEpisode(fileName) {
 }
 
 async function fetchIndex() {
-  const response = await fetch('https://tmbh-transcribe.github.io/TMBH-Transcribe/index.json');
+  const response = await fetch('https://tmbh-transcribe.github.io/NDQ-Transcribe/index.json');
   const indexJson = await response.json();
   return lunr.Index.load(indexJson);
 }

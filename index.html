@@ -5,137 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TMBH Transcripts</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" defer></script>
+  <script src="Code/index.js" defer></script>
 </head>
 <body>
   <h1>HTML Files:</h1>
-  <ul>
-    
-      <li><a href="SmartTranscripts/096.html">096.html</a></li>
-    
-      <li><a href="SmartTranscripts/097.html">097.html</a></li>
-    
-      <li><a href="SmartTranscripts/098.html">098.html</a></li>
-    
-      <li><a href="SmartTranscripts/099.html">099.html</a></li>
-    
-      <li><a href="SmartTranscripts/100.html">100.html</a></li>
-    
-      <li><a href="SmartTranscripts/101.html">101.html</a></li>
-    
-      <li><a href="SmartTranscripts/102.html">102.html</a></li>
-    
-      <li><a href="SmartTranscripts/103.html">103.html</a></li>
-    
-      <li><a href="SmartTranscripts/104.html">104.html</a></li>
-    
-      <li><a href="SmartTranscripts/105.html">105.html</a></li>
-    
-      <li><a href="SmartTranscripts/106.html">106.html</a></li>
-    
-      <li><a href="SmartTranscripts/107.html">107.html</a></li>
-    
-      <li><a href="SmartTranscripts/108.html">108.html</a></li>
-    
-      <li><a href="SmartTranscripts/109.html">109.html</a></li>
-    
-      <li><a href="SmartTranscripts/110.html">110.html</a></li>
-    
-      <li><a href="SmartTranscripts/111.html">111.html</a></li>
-    
-      <li><a href="SmartTranscripts/112.html">112.html</a></li>
-    
-      <li><a href="SmartTranscripts/113.html">113.html</a></li>
-    
-      <li><a href="SmartTranscripts/114.html">114.html</a></li>
-    
-      <li><a href="SmartTranscripts/115.html">115.html</a></li>
-    
-      <li><a href="SmartTranscripts/116.html">116.html</a></li>
-    
-      <li><a href="SmartTranscripts/117.html">117.html</a></li>
-    
-      <li><a href="SmartTranscripts/118.html">118.html</a></li>
-    
-      <li><a href="SmartTranscripts/119.html">119.html</a></li>
-    
-      <li><a href="SmartTranscripts/120.html">120.html</a></li>
-    
-      <li><a href="SmartTranscripts/121.html">121.html</a></li>
-    
-      <li><a href="SmartTranscripts/122.html">122.html</a></li>
-    
-      <li><a href="SmartTranscripts/123.html">123.html</a></li>
-    
-      <li><a href="SmartTranscripts/124.html">124.html</a></li>
-    
-      <li><a href="SmartTranscripts/125.html">125.html</a></li>
-    
-      <li><a href="SmartTranscripts/126.html">126.html</a></li>
-    
-      <li><a href="SmartTranscripts/127.html">127.html</a></li>
-    
-      <li><a href="SmartTranscripts/128.html">128.html</a></li>
-    
-      <li><a href="SmartTranscripts/129.html">129.html</a></li>
-    
-      <li><a href="SmartTranscripts/130.html">130.html</a></li>
-    
-      <li><a href="SmartTranscripts/131.html">131.html</a></li>
-    
-      <li><a href="SmartTranscripts/132.html">132.html</a></li>
-    
-      <li><a href="SmartTranscripts/133.html">133.html</a></li>
-    
-      <li><a href="SmartTranscripts/134.html">134.html</a></li>
-    
-      <li><a href="SmartTranscripts/135.html">135.html</a></li>
-    
-      <li><a href="SmartTranscripts/136.html">136.html</a></li>
-    
-      <li><a href="SmartTranscripts/137.html">137.html</a></li>
-    
-      <li><a href="SmartTranscripts/138.html">138.html</a></li>
-    
-      <li><a href="SmartTranscripts/139.html">139.html</a></li>
-    
-      <li><a href="SmartTranscripts/140.html">140.html</a></li>
-    
-      <li><a href="SmartTranscripts/141.html">141.html</a></li>
-    
-      <li><a href="SmartTranscripts/142.html">142.html</a></li>
-    
-      <li><a href="SmartTranscripts/143.html">143.html</a></li>
-    
-      <li><a href="SmartTranscripts/144.html">144.html</a></li>
-    
-      <li><a href="SmartTranscripts/145.html">145.html</a></li>
-    
-      <li><a href="SmartTranscripts/146.html">146.html</a></li>
-    
-      <li><a href="SmartTranscripts/147.html">147.html</a></li>
-    
-      <li><a href="SmartTranscripts/148.html">148.html</a></li>
-    
-      <li><a href="SmartTranscripts/149.html">149.html</a></li>
-    
-      <li><a href="SmartTranscripts/150.html">150.html</a></li>
-    
-      <li><a href="SmartTranscripts/151.html">151.html</a></li>
-    
-      <li><a href="SmartTranscripts/152.html">152.html</a></li>
-    
-      <li><a href="SmartTranscripts/153.html">153.html</a></li>
-    
-      <li><a href="SmartTranscripts/154.html">154.html</a></li>
-    
-      <li><a href="SmartTranscripts/155.html">155.html</a></li>
-    
-      <li><a href="SmartTranscripts/156.html">156.html</a></li>
-    
-      <li><a href="SmartTranscripts/157.html">157.html</a></li>
-    
+  <input type="text" id="searchBox" placeholder="Type to search...">
+  <p>Logic for searching follows <a href="https://lunrjs.com/guides/searching.html">lunr's logic</a></p>
+<ul id="transcripts">  
 </ul>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
-<script src="https://tmbh-transcribe.github.io/TMBH-Transcribe/Code/search.js"></script>
 </body>
 </html>
